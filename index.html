@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2B4BD8">
+<title>Trilha - Plataforma de estudos</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Crect width='34' height='34' rx='10' fill='%232B4BD8'/%3E%3Cpath d='M8 25c0-6 9-4 9-9.5S25 13 26 9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='26' cy='9' r='3.4' fill='%23FFD23F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<button type="button" class="pular" id="pular">Pular para o conteúdo</button>
+<header class="topo">
+  <div class="cont">
+    <a class="logo" href="#inicio" aria-label="Trilha, ir para o início">
+      <svg viewBox="0 0 34 34" aria-hidden="true" focusable="false"><rect width="34" height="34" rx="10" fill="#2B4BD8"/><path d="M8 25c0-6 9-4 9-9.5S25 13 26 9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="26" cy="9" r="3.4" fill="#FFD23F"/></svg>
+      <span>Trilha</span>
+    </a>
+  </div>
+</header>
+<main id="app" class="cont" tabindex="-1"></main>
+<!-- A ordem importa: dados, núcleo, banco, atividade, modos, página inicial, início -->
+<script src="js/dados/questoes.js"></script>
+<script src="js/nucleo.js"></script>
+<script src="js/banco.js"></script>
+<script src="js/atividade.js"></script>
+<script src="js/modos/geral.js"></script>
+<script src="js/modos/especifico.js"></script>
+<script src="js/modos/redacao.js"></script>
+<script src="js/home.js"></script>
+<script src="js/iniciar.js"></script>
+</body>
+</html>

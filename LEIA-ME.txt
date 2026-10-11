@@ -1,0 +1,34 @@
+TRILHA - plataforma de estudos (versão de teste)
+
+COMO ABRIR
+Dê dois cliques em index.html. Não precisa instalar nada nem ter internet
+(com internet, as fontes do Google carregam; sem ela, usa fonte padrão).
+
+ONDE FICA CADA COISA
+index.html               Página base (topo + área onde as telas aparecem) e ordem dos scripts
+css/estilo.css           Todo o visual (cores e fontes no começo do arquivo, em :root)
+js/dados/questoes.js     Banco de questões (410). Para adicionar questões, edite este arquivo
+js/nucleo.js             Nome da plataforma, ícones, botões, navegação entre telas
+js/banco.js              Organiza o banco por matéria/assunto e sorteia as questões
+js/atividade.js          Tela de perguntas e de resultado (usada pelos modos 1 e 2)
+js/modos/geral.js        Modo 1: Perguntas gerais
+js/modos/especifico.js   Modo 2: Assuntos específicos
+js/modos/redacao.js      Modo 3: Redação (só a estrutura por enquanto)
+js/home.js               Página inicial (monta os cartões dos modos)
+js/iniciar.js            Liga tudo e abre a primeira tela
+
+AJUSTES RÁPIDOS
+- Nome da plataforma: NOME_PLATAFORMA em js/nucleo.js e o texto "Trilha" no topo de index.html
+- Máximo de questões no Modo 1: MAX_GERAL em js/banco.js
+- Questões por atividade no Modo 2: POR_ATIVIDADE em js/banco.js
+- Proporção com assuntos aleatórios (Modo 1): PARTE_SELECIONADOS em js/banco.js
+- Novo modo de estudo: crie js/modos/novo.js, use Modos.push({...}) e Rotas.novo = function(){...},
+  e inclua o script em index.html antes de js/home.js. O cartão aparece sozinho na página inicial.
+
+FORMATO DE UMA QUESTÃO (em js/dados/questoes.js)
+{ id, materia, assunto, area (só Ciências da Natureza), dificuldade, enunciado,
+  alternativas: {A..E}, gabarito: "letra", explicacao, erro_comum, revisado }
+
+OBSERVAÇÕES
+- Cada assunto tem 5 questões no banco. O Modo 2 usa até 10; com 5, a atividade tem 5.
+- As questões são inéditas e ainda precisam de revisão (campo "revisado").
